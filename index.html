@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テックブレイカーズアンケート</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('/api/placeholder/1600/900');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>テックブレイカーズアンケート</h1>
+        <form action="mailto:teamkimi@mail.goo.ne.jp" method="post" enctype="text/plain">
+            <div class="question">
+                <p>イベント全体の満足度はいかがでしたか？</p>
+                <label><input type="radio" name="satisfaction" value="very"> とても満足</label>
+                <label><input type="radio" name="satisfaction" value="somewhat"> まあまあ満足</label>
+                <label><input type="radio" name="satisfaction" value="not"> あまり満足していない</label>
+            </div>
+
+            <div class="question">
+                <p>イベントの進行や説明は分かりやすかったですか？</p>
+                <label><input type="radio" name="clarity" value="very"> とても分かりやすかった</label>
+                <label><input type="radio" name="clarity" value="normal"> 普通</label>
+                <label><input type="radio" name="clarity" value="difficult"> 分かりにくかった</label>
+            </div>
+
+            <div class="question">
+                <p>一番楽しかった活動は何でしたか？</p>
+                <label><input type="radio" name="favorite" value="disassembly"> パソコンの分解</label>
+                <label><input type="radio" name="favorite" value="competition"> 部品数を競う競技</label>
+                <label><input type="radio" name="favorite" value="cooperation"> 友達と協力すること</label>
+            </div>
+
+            <div class="question">
+                <p>綾部市の産業についてどのくらい知っていましたか？</p>
+                <label><input type="radio" name="knowledge" value="very"> とてもよく知っている</label>
+                <label><input type="radio" name="knowledge" value="somewhat"> 多少知っている</label>
+                <label><input type="radio" name="knowledge" value="little"> ほとんど知らない</label>
+            </div>
+
+            <div class="question">
+                <p>綾部市の会社や工場を見学したいと思いますか？</p>
+                <label><input type="radio" name="visit" value="yes"> はい、見学したい</label>
+                <label><input type="radio" name="visit" value="neutral"> どちらでもない</label>
+                <label><input type="radio" name="visit" value="no"> いいえ、あまり興味がない</label>
+            </div>
+
+            <div class="question">
+                <p>綾部市の産業に対する興味や関心は高まりましたか？</p>
+                <label><input type="radio" name="interest" value="very"> とても高まった</label>
+                <label><input type="radio" name="interest" value="somewhat"> 多少高まった</label>
+                <label><input type="radio" name="interest" value="little"> あまり高まらなかった</label>
+            </div>
+
+            <div class="question">
+                <p>将来、どのような職業に就きたいと思いますか？</p>
+                <label><input type="radio" name="future_job" value="tech"> 技術系の職業（エンジニア、プログラマーなど）</label>
+                <label><input type="radio" name="future_job" value="service"> サービス業（接客、販売など）</label>
+                <label><input type="radio" name="future_job" value="other"> その他（芸術、教育など）</label>
+            </div>
+
+            <div class="question">
+                <p>綾部市で働きたいと思いますか？</p>
+                <label><input type="radio" name="work_in_ayabe" value="yes"> はい、働きたい</label>
+                <label><input type="radio" name="work_in_ayabe" value="neutral"> どちらでもない</label>
+                <label><input type="radio" name="work_in_ayabe" value="no"> いいえ、他の場所で働きたい</label>
+            </div>
+
+            <div class="question">
+                <p>技術やものづくりに関する仕事に興味がありますか？</p>
+                <label><input type="radio" name="tech_interest" value="very"> とても興味がある</label>
+                <label><input type="radio" name="tech_interest" value="somewhat"> 多少興味がある</label>
+                <label><input type="radio" name="tech_interest" value="little"> あまり興味がない</label>
+            </div>
+
+            <div class="question">
+                <p>その他感想があれば自由に描いてください。</p>
+                <textarea name="comments"></textarea>
+            </div>
+
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</body>
+</html>
